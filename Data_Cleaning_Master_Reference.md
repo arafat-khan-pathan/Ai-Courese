@@ -245,6 +245,16 @@ df.loc[mask, "col"]
 ## 9. Validate IDs
 
 ```python
+df.loc[
+    condition,
+    column
+] = new_value
+
+df.loc[
+    Which rows?,
+    Which column?
+] = What value?
+
 # one CustomerID should map to exactly ONE customer name
 id_check = df.groupby("customer_id")["customer_name"].nunique()
 bad_ids = id_check[id_check > 1].index
@@ -272,6 +282,14 @@ df = df[
     (df["price"].between(0, 1000)) &
     (df["quantity"] > 0)
 ]
+
+df.loc[
+    ~df["city"].isin(valid_city),
+    "city"
+] = np.nan
+
+df.loc[df["price"] < 0, "price"] = np.nan  # Find rows where price < 0, then in the price column, replace the value with NaN.
+df.loc[df["age"] < 18, "status"] = "Minor" # Find rows where age < 18, then in the status column, write "Minor".
 ```
 
 ---
