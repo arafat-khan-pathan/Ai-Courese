@@ -386,6 +386,9 @@ mismatch = df[~np.isclose(expected, df["total"], atol=0.5, equal_nan=False)]
 df["quantity"] = df["quantity"].astype(int)
 df["price_each"] = df["price_each"].astype(float)
 
+col = df.pop("price")       # delete
+df.insert(0, "price", col)  # insert in index 1 other shift right
+
 df["total"] = df["quantity"] * df["price_each"]     # base amount
 df["discount"] = df["total"] * 0.10                 # example discount rule
 df["net"] = df["total"] - df["discount"]            # final amount after discount
