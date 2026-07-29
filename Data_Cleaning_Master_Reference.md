@@ -178,6 +178,11 @@ fmt1 = pd.to_datetime(df["order_date"], format="%d/%m/%Y", errors="coerce")
 fmt2 = pd.to_datetime(df["order_date"], format="%Y-%m-%d", errors="coerce")
 df["order_date"] = fmt1.fillna(fmt2)
 
+df["order_date"] = pd.to_datetime(df["order_date"],format="mixed",dayfirst=True)
+df["order_date"] = df["order_date"].dt.strftime("%d-%m-%Y")
+print(df["order_date"].dtype)
+print(df.to_string())
+
 df["order_date"].isna().sum()   # count parsing failures (NaT) — investigate if high
 ```
 
@@ -248,6 +253,25 @@ df[df["customer_id"].isin(bad_ids)]     # inspect manually — don't guess which
 # format validation with regex — define what a VALID id looks like first
 df["valid_id_format"] = df["customer_id"].str.fullmatch(r"C\d{4}")
 df[~df["valid_id_format"]]              # rows with malformed IDs
+
+valid_city = ["Dhaka", "Khulna", "Rajshahi"]
+df = df[df["city"].isin(valid_city)]
+
+# Price must be between 0 and 1000
+df.loc[~df["price"].between(0, 1000), "price"] = np.nan
+
+# Quantity must be positive
+df = df[df["quantity"] > 0]
+
+# City must be one of these values
+valid_city = ["Dhaka", "Khulna", "Rajshahi"]
+df = df[df["city"].isin(valid_city)]
+
+# Price and Quantity must both be valid
+df = df[
+    (df["price"].between(0, 1000)) &
+    (df["quantity"] > 0)
+]
 ```
 
 ---
