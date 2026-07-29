@@ -312,8 +312,29 @@ email_pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
 df["valid_email"] = df["email"].str.match(email_pattern, na=False)
 # na=False: missing emails count as "not valid" instead of raising an error
 
+valid_provider = r"^(?![0-9])[A-Za-z][A-Za-z0-9._%+-]*@(gmail|yahoo|claude)\.(com|org|io|bd|is|in)$"
+^[A-Za-z][A-Za-z0-9._%+-]*@(gmail|yahoo)\.(com|org)$ # this also
+df["email"] = df["email"].where(
+    df["email"].str.fullmatch(valid_provider),
+    np.nan
+)
+
 df["valid_phone"] = df["phone"].str.replace(r'\D', '', regex=True).str.len().between(7, 15)
 # strip non-digit formatting chars (-, (), +) first so they don't count against length
+
+df["phone"] = df["phone"].where(
+    df["phone"].str.fullmatch(r"^01[3-9][0-9]{8}$"),    # ^(\+8801|01)[3-9][0-9]{8}$  
+    np.nan
+)
+df["phone"] = (
+    df["phone"]
+    .astype(str)
+    .str.replace(r"\D", "", regex=True)   # \D means anything that is NOT a digit. Remove non-digits
+)
+df["phone"] = df["phone"].where(
+    df["phone"].str.fullmatch(r"\d{11}"),
+    np.nan
+)
 ```
 
 ---
