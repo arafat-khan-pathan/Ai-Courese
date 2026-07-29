@@ -31,7 +31,7 @@ Replace `df`, `col`, `price` etc. with YOUR real column names.
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv("file.csv")                 # CSV
+df = pd.read_csv("file.csv")                  # CSV
 df = pd.read_excel("file.xlsx")               # Excel
 df = pd.read_csv("file.csv", dtype=str)       # SAFER first pass: everything as text
 # WHY dtype=str: stops pandas guessing types early and silently dropping leading zeros
@@ -46,19 +46,19 @@ df = pd.read_csv("file.csv", dtype=str)       # SAFER first pass: everything as 
 pd.set_option('display.max_columns', None)    # show all columns, not truncated
 pd.set_option('display.max_colwidth', None)   # show full text, catch hidden \t \n
 
-df.shape              # (rows, cols)
-df.shape[0]            # row count
-df.shape[1]            # column count
+df.shape                # (rows, cols)
+df.shape[0]             # row count
+df.shape[1]             # column count
 len(df)                 # row count (alt)
-df.head()             # first 5 rows
-df.tail()             # last 5 rows
-df.sample(20)          # RANDOM rows — better than head(), surfaces more problems
-df.info()             # dtypes + non-null counts
-df.describe()         # numeric summary stats
+df.head()               # first 5 rows
+df.tail()               # last 5 rows
+df.sample(20)           # RANDOM rows — better than head(), surfaces more problems
+df.info()               # dtypes + non-null counts
+df.describe()           # numeric summary stats
 df.describe(include='all')   # stats for ALL columns, incl. categorical
-df.columns            # column names
-df.dtypes             # dtype per column
-df.count()            # non-null count per column
+df.columns             # column names
+df.dtypes              # dtype per column
+df.count()             # non-null count per column
 df.isnull().sum()      # missing count per column
 df.isnull().sum() / len(df) * 100   # % missing per column
 df['col'].value_counts(dropna=False)   # run per column — reveals every messy variant
@@ -73,7 +73,7 @@ df['col'].unique()     # all distinct values in a column
 
 ```python
 df.columns = df.columns.str.strip()             # remove extra spaces
-df.columns = df.columns.str.lower()              # lowercase
+df.columns = df.columns.str.lower()             # lowercase
 df.columns = df.columns.str.replace(" ", "_")   # spaces -> underscore
 
 # rename specific columns — dict must have commas between pairs:
@@ -107,17 +107,17 @@ df.isnull().sum()                    # recheck AFTER step 4 — this is the real
 
 # --- DROP strategies ---
 df.dropna()                          # drop rows with ANY missing value (aggressive — use sparingly)
-df.dropna(subset=["price"])           # drop rows missing in one specific column
+df.dropna(subset=["price"])          # drop rows missing in one specific column
 df.dropna(subset=["price", "quantity"])   # drop rows missing in either of several columns
 df.dropna(how="all")                 # drop rows only if ALL values are missing
-df.dropna(thresh=5)                   # keep rows with at least 5 non-null values
-df.dropna(axis=1, how="all")          # drop COLUMNS that are entirely missing
+df.dropna(thresh=5)                  # keep rows with at least 5 non-null values
+df.dropna(axis=1, how="all")         # drop COLUMNS that are entirely missing
 
 # --- FILL strategies ---
-df.fillna(0)                                            # fixed value (use carefully — 0 can distort stats)
-df["col"].fillna(df["col"].mean(), inplace=True)         # numeric: mean
-df["col"].fillna(df["col"].median(), inplace=True)       # numeric: median (safer if outliers exist)
-df["col"].fillna(df["col"].mode()[0], inplace=True)      # categorical: most frequent value
+df.fillna(0)                                              # fixed value (use carefully — 0 can distort stats)
+df["col"].fillna(df["col"].mean(), inplace=True)          # numeric: mean
+df["col"].fillna(df["col"].median(), inplace=True)        # numeric: median (safer if outliers exist)
+df["col"].fillna(df["col"].mode()[0], inplace=True)       # categorical: most frequent value
 df["col"] = df["col"].fillna("Unknown")                   # categorical: explicit placeholder
 df["col"].fillna(method="ffill", inplace=True)            # forward fill (time-ordered data only)
 df["col"].fillna(method="bfill", inplace=True)            # backward fill
@@ -139,7 +139,7 @@ df["price"] = df.groupby("category")["price"].transform(lambda x: x.fillna(x.med
 df["price"] = df["price"].str.replace("$", "", regex=False)
 df["price"] = df["price"].str.replace(",", "", regex=False)
 df["price"] = df["price"].str.replace(r'[^0-9.]', '', regex=True)   # strip everything except digits/decimal
-df["price"] = df["price"].str.replace(" pcs", "", regex=False)       # strip unit labels
+df["price"] = df["price"].str.replace(" pcs", "", regex=False)      # strip unit labels
 
 # European-style decimal comma vs thousands separator — ONLY if you've confirmed this pattern exists:
 df["price"] = df["price"].str.replace(".", "", regex=False).str.replace(",", ".", regex=False)
@@ -180,8 +180,8 @@ df["order_date"].isna().sum()   # count parsing failures (NaT) — investigate i
 ## 7. Remove Duplicates
 
 ```python
-df.duplicated().sum()                                  # count exact full-row duplicates
-df[df.duplicated(keep=False)]                            # show ALL copies (not just the "extra" one)
+df.duplicated().sum()                                     # count exact full-row duplicates
+df[df.duplicated(keep=False)]                             # show ALL copies (not just the "extra" one)
 df = df.drop_duplicates()                                 # remove exact duplicates, keep first by default
 df = df.drop_duplicates(subset=["id"])                    # dedupe by one key column
 df = df.drop_duplicates(subset=["product", "price", "quantity"])   # dedupe by a combination of columns
@@ -206,8 +206,8 @@ df[key.duplicated(keep=False)]
 ## 8. Fix Inconsistent Text / Categories
 
 ```python
-df["col"] = df["col"].str.strip()                          # remove leading/trailing spaces
-df["col"] = df["col"].str.replace(r'\s+', ' ', regex=True)  # collapse internal multiple spaces/tabs/newlines
+df["col"] = df["col"].str.strip()                            # remove leading/trailing spaces
+df["col"] = df["col"].str.replace(r'\s+', ' ', regex=True)   # collapse internal multiple spaces/tabs/newlines
 df["col"] = df["col"].str.lower()                            # or .str.title() / .str.upper() — pick ONE standard
 df["col"] = df["col"].str.replace(" ", "_")                  # spaces -> underscore (for slug-style values)
 df["col"] = df["col"].str.replace("_", " ")                  # underscore -> spaces (reverse)
@@ -328,8 +328,8 @@ df["quantity"] = df["quantity"].astype(int)
 df["price_each"] = df["price_each"].astype(float)
 
 df["total"] = df["quantity"] * df["price_each"]     # base amount
-df["discount"] = df["total"] * 0.10                  # example discount rule
-df["net"] = df["total"] - df["discount"]              # final amount after discount
+df["discount"] = df["total"] * 0.10                 # example discount rule
+df["net"] = df["total"] - df["discount"]            # final amount after discount
 ```
 > Only derive new columns from ALREADY-cleaned inputs — a "Total" calculated from a
 > still-messy price column just propagates the mess into a new place.
@@ -385,13 +385,4 @@ Final     -> assert checks, then .to_csv(index=False)
 
 ---
 
-## Notes on What Changed From Your Original Files
 
-- Fixed a syntax bug: a `rename(columns={...})` dict needs commas between key-value pairs.
-- Removed redundant/contradictory lines that were just left in as practice (e.g. filling the
-  same column with mean, then mode, then 0 in sequence) — pick ONE strategy per column and justify it.
-- Added: column-name cleanup (was missing from the code-reference file), ID consistency checks,
-  email/phone validation, boolean standardization, hidden-duplicate detection, cross-field date/total
-  logic checks, and final `assert` checks — these close real gaps, not just formatting cleanup.
-- Reordered everything into one workflow: column names → nulls → missing values → types → duplicates
-  → text → validation → outliers → cross-field logic → features → final checks → export.
