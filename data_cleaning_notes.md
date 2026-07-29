@@ -36,13 +36,19 @@ df = pd.read_excel("file.xlsx")       # for Excel
 ## 1. First Look at the Data
 
 ```python
+print(len(df))    # counts only the data rows, not the column names
 df.shape          # (rows, columns)
+df.shape[0]       # Total rows 
+df.shape[1]       # Total columns 
 df.head()         # first 5 rows
 df.tail()         # last 5 rows
 df.info()         # types + missing count
 df.describe()     # stats for numeric columns
 df.columns        # list of column names
 df.dtypes         # data type of each column
+print(df.count()) # Counts only non-missing values.
+print(df.isnull().sum()) # it counts the True values in each column.
+
 ```
 
 **Goal:** understand size, types, and spot obvious problems.
@@ -52,12 +58,16 @@ df.dtypes         # data type of each column
 ## 2. Fix Column Names
 
 ```python
-df.columns = df.columns.str.strip()          # remove extra spaces
-df.columns = df.columns.str.lower()          # lowercase
+df.columns = df.columns.str.strip()           # remove extra spaces
+df.columns = df.columns.str.lower()           # lowercase
 df.columns = df.columns.str.replace(" ", "_") # spaces -> underscore
 
 # or rename specific ones
 df.rename(columns={"Old Name": "new_name"}, inplace=True)
+df = df.rename(columns={
+    'rating' : 'ratingSels'.lower()
+    'fullName' : 'fullName'.lower()
+})
 ```
 
 **Goal:** clean, consistent, easy-to-type column names.
