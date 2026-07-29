@@ -146,6 +146,12 @@ df["price"] = df["price"].str.replace(".", "", regex=False).str.replace(",", "."
 
 df["price"] = pd.to_numeric(df["price"], errors="coerce")   # bad values -> NaN, doesn't crash
 # df["price"] = pd.to_numeric(df["price"], errors="raise")  # use instead when you WANT it to crash on bad data
+
+Phone must contain exactly 11 digits.
+df.loc[
+    ~df["phone"].str.fullmatch(r"\d{11}"),
+    "phone"
+] = np.nan
 ```
 ```python
 # ALWAYS check before/after — a big jump means you destroyed real data, not just garbage:
