@@ -396,6 +396,7 @@ df.describe()                # confirm ranges make sense (no negative prices, no
 assert df.duplicated().sum() == 0
 assert (df["price"] >= 0).all()
 assert df["customer_id"].notna().all()
+print(df["city"].value_counts())
 ```
 
 ---
@@ -408,6 +409,31 @@ df.to_excel("cleaned_data.xlsx", index=False)
 
 check = pd.read_csv("cleaned_data.csv")
 check.info()   # re-read your own export and confirm dtypes actually stuck
+```
+
+## 17. Create a Validation Report
+
+After cleaning, run:
+
+```python
+print("=" * 50)
+print("DATA VALIDATION REPORT")
+print("=" * 50)
+
+print("\nShape:")
+print(df.shape)
+
+print("\nMissing Values:", end = " ")
+print(df.isnull().sum())
+
+print("\nDuplicate Rows:")
+print(df.duplicated().sum())
+
+print("\nData Types:")
+print(df.dtypes)
+
+print("\nSummary:")
+print(df.describe(include="all"))
 ```
 
 ---
