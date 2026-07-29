@@ -170,6 +170,8 @@ df["category"] = df["category"].astype("category")   # memory-efficient for low-
 
 ### 6c. Dates (mixed formats)
 ```python
+today = pd.Timestamp.today()
+df = df[df["order_date"] <= today]
 df["order_date"] = pd.to_datetime(df["order_date"], errors="coerce", dayfirst=True)
 # errors="coerce": unparseable/invalid dates (Feb 30, "0000-00-00") become NaT instead of crashing
 
@@ -182,6 +184,15 @@ df["order_date"] = pd.to_datetime(df["order_date"],format="mixed",dayfirst=True)
 df["order_date"] = df["order_date"].dt.strftime("%d-%m-%Y")
 print(df["order_date"].dtype)
 print(df.to_string())
+
+df = df[
+    df["order_date"].between("2024-01-01", "2025-12-31")
+]
+
+df = df[
+    (df["order_date"] >= "2024-01-01") &
+    (df["order_date"] <= "2025-12-31")
+]
 
 df["order_date"].isna().sum()   # count parsing failures (NaT) — investigate if high
 ```
