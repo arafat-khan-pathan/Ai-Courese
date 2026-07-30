@@ -131,6 +131,9 @@ cols = ["temperature_c", "humidity_pct", "rainfall_mm"]
 df[cols] = df[cols].astype(float).abs()
 for col in cols:
     df[col] = df[col].fillna(df.groupby("date")[col].transform("mean"))
+
+df["humidity_pct"] = (df["humidity_pct"].fillna(df.groupby("date")["humidity_pct"].transform("mean")).ffill().bfill()).round(1)
+
 ```
 > **Rule of thumb:** numeric → mean/median (median if outliers present). Categorical → mode or `"Unknown"`.
 > **Never** fill an identifier column (e.g. CustomerID) — a missing ID is a row to flag, not guess.
