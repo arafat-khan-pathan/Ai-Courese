@@ -126,6 +126,11 @@ df["col"].fillna(method="bfill", inplace=True)            # backward fill
 df["price"] = df.groupby("category")["price"].transform(lambda x: x.fillna(x.median()))
 # WHY: a missing Electronics price shouldn't be filled using the whole dataset's average
 # (which is dragged down/up by cheap/expensive unrelated categories like Books or Furniture)
+
+cols = ["temperature_c", "humidity_pct", "rainfall_mm"]
+df[cols] = df[cols].astype(float).abs()
+for col in cols:
+    df[col] = df[col].fillna(df.groupby("date")[col].transform("mean"))
 ```
 > **Rule of thumb:** numeric → mean/median (median if outliers present). Categorical → mode or `"Unknown"`.
 > **Never** fill an identifier column (e.g. CustomerID) — a missing ID is a row to flag, not guess.
