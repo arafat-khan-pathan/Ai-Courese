@@ -354,6 +354,12 @@ bool_map = {
 df["is_returned"] = df["is_returned"].astype(str).str.lower().str.strip().map(bool_map)
 # WHY .map() not .replace(): any UNMAPPED value ("Nope", "Ya") becomes NaN automatically —
 # forces you to notice and decide, instead of silently misclassifying it.
+
+### sort
+df = df.sort_values(
+    by=["department", "date", "salary"],
+    ascending=[True, True, False]
+)
 ```
 
 ---
