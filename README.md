@@ -1,28 +1,28 @@
 # AI Course Notes and Data Cleaning Practice
 
-This repository is a practical learning resource for beginners who want to build strong foundations in Python-based data analysis. It focuses on NumPy, Pandas, and real-world data cleaning techniques used in everyday analytics and machine learning workflows.
+This repository serves as a structured learning resource for individuals developing foundational skills in Python-based data analysis. It focuses on NumPy, Pandas, and practical data cleaning techniques commonly used in analytics and machine learning workflows.
 
-## What’s Included
+## Contents
 
-- [numpy_notes.md](numpy_notes.md) — a concise reference for array creation, indexing, reshaping, mathematical operations, and array manipulation.
-- [pandas_notes.md](pandas_notes.md) — a beginner-friendly guide to DataFrames, filtering, grouping, merging, and basic statistics.
-- [data_cleaning_notes.md](data_cleaning_notes.md) — step-by-step notes on handling missing values, duplicates, inconsistent formats, and invalid data.
-- [Data_Cleaning_Master_Reference.md](Data_Cleaning_Master_Reference.md) — a deeper reference for validation rules, data quality checks, and cleaning best practices.
-- [practice/](practice/) — sample CSV datasets and exercises designed to help you practice cleaning messy real-world data.
+- <a href="numpy_notes.md" style="text-decoration: none; color: #0366d6;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">numpy_notes.md</a> — a concise reference for array creation, indexing, reshaping, mathematical operations, and array manipulation.
+- <a href="pandas_notes.md" style="text-decoration: none; color: #0366d6;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">pandas_notes.md</a> — a practical guide to DataFrames, filtering, grouping, merging, and basic statistical analysis.
+- <a href="data_cleaning_notes.md" style="text-decoration: none; color: #0366d6;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">data_cleaning_notes.md</a> — step-by-step notes on handling missing values, duplicates, inconsistent formats, and invalid data.
+- <a href="Data_Cleaning_Master_Reference.md" style="text-decoration: none; color: #0366d6;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Data_Cleaning_Master_Reference.md</a> — a comprehensive reference for validation rules, data quality checks, and best practices in data preparation.
+- <a href="practice/" style="text-decoration: none; color: #0366d6;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">practice/</a> — sample datasets and exercises designed to reinforce data cleaning skills through realistic examples.
 
-## Learning Goals
+## Learning Objectives
 
 By working through this repository, you will:
 
-- Understand the basics of NumPy and Pandas
-- Learn how to inspect and clean messy datasets
-- Improve your data preparation skills for analysis and modeling
+- Develop a solid understanding of NumPy and Pandas
+- Learn how to inspect, assess, and clean messy datasets
+- Strengthen your data preparation skills for analysis and modeling tasks
 
-## How to Use
+## How to Use This Repository
 
-1. Start with [numpy_notes.md](numpy_notes.md) and [pandas_notes.md](pandas_notes.md).
-2. Follow [data_cleaning_notes.md](data_cleaning_notes.md) for practical cleaning steps.
-3. Practice with the files in [practice/](practice/) to apply the concepts to real examples.
+1. Begin with <a href="numpy_notes.md" style="text-decoration: none; color: #0366d6;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">numpy_notes.md</a> and <a href="pandas_notes.md" style="text-decoration: none; color: #0366d6;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">pandas_notes.md</a> to build foundational knowledge.
+2. Follow <a href="data_cleaning_notes.md" style="text-decoration: none; color: #0366d6;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">data_cleaning_notes.md</a> for practical cleaning workflows.
+3. Use the materials in <a href="practice/" style="text-decoration: none; color: #0366d6;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">practice/</a> to apply the concepts to realistic examples.
 
 ## Requirements
 
@@ -30,7 +30,7 @@ By working through this repository, you will:
 - Jupyter Notebook, VS Code, or Colab
 - pandas and numpy
 
-Install the main dependencies with:
+Install the required packages with:
 
 ```bash
 pip install pandas numpy
