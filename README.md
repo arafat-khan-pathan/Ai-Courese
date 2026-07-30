@@ -1,33 +1,37 @@
-# AI Course Notes
+# AI Course Notes and Data Cleaning Practice
 
-This repository is a beginner-friendly collection of practical AI/data-analysis study notes focused on NumPy, Pandas, and data cleaning workflows.
+This repository is a practical learning resource for beginners who want to build strong foundations in Python-based data analysis. It focuses on NumPy, Pandas, and real-world data cleaning techniques used in everyday analytics and machine learning workflows.
 
 ## What’s Included
 
-- **`numpy_notes.md`**  
-  Quick syntax reference for array creation, indexing, reshaping, math operations, sorting, joining, and copy/view behavior.
+- [numpy_notes.md](numpy_notes.md) — a concise reference for array creation, indexing, reshaping, mathematical operations, and array manipulation.
+- [pandas_notes.md](pandas_notes.md) — a beginner-friendly guide to DataFrames, filtering, grouping, merging, and basic statistics.
+- [data_cleaning_notes.md](data_cleaning_notes.md) — step-by-step notes on handling missing values, duplicates, inconsistent formats, and invalid data.
+- [Data_Cleaning_Master_Reference.md](Data_Cleaning_Master_Reference.md) — a deeper reference for validation rules, data quality checks, and cleaning best practices.
+- [practice/](practice/) — sample CSV datasets and exercises designed to help you practice cleaning messy real-world data.
 
-- **`pandas_notes.md`**  
-  Core Pandas reference covering DataFrames, file I/O, selection, filtering, missing values, grouping, merging, and basic statistics.
+## Learning Goals
 
-- **`data_cleaning_notes.md`**  
-  Step-by-step data cleaning guide for CSV/Excel data, including column cleanup, null handling, dtype fixes, duplicates, outliers, and export.
+By working through this repository, you will:
 
-- **`Data_Cleaning_Master_Reference.md`**  
-  Full end-to-end master reference with deeper validation patterns such as ID checks, email/phone validation, cross-field logic checks, and reporting.
-
-## Purpose
-
-Use these notes for fast revision and hands-on practice while learning:
-
-- NumPy fundamentals
-- Pandas fundamentals
-- Real-world data cleaning pipelines
+- Understand the basics of NumPy and Pandas
+- Learn how to inspect and clean messy datasets
+- Improve your data preparation skills for analysis and modeling
 
 ## How to Use
 
-1. Start with `numpy_notes.md` and `pandas_notes.md` to build core syntax fluency.
-2. Follow `data_cleaning_notes.md` for practical cleaning workflow steps.
-3. Use `Data_Cleaning_Master_Reference.md` as the complete checklist for real datasets.
+1. Start with [numpy_notes.md](numpy_notes.md) and [pandas_notes.md](pandas_notes.md).
+2. Follow [data_cleaning_notes.md](data_cleaning_notes.md) for practical cleaning steps.
+3. Practice with the files in [practice/](practice/) to apply the concepts to real examples.
 
-Copy examples into Jupyter Notebook, Colab, or local Python scripts and practice with your own datasets.
+## Requirements
+
+- Python 3.x
+- Jupyter Notebook, VS Code, or Colab
+- pandas and numpy
+
+Install the main dependencies with:
+
+```bash
+pip install pandas numpy
+```
