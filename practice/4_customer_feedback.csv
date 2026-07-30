@@ -1,0 +1,44 @@
+response_id,product_area,rating,sentiment,comment
+1,website,1.0,neutral,Terrible experience!!!
+2,App,5.0,NEUTRAL,Great service!
+3,Website,3.0,NEUTRAL,Terrible experience!!!
+4,App,5.0,NEUTRAL,Terrible experience!!!
+5,App ,6.0,positive,Terrible experience!!!
+6,Delivery,6.0,NEUTRAL,Terrible experience!!!
+7,Delivery,2.0,NEUTRAL,Great service!
+8,App ,2.0,Negative,Not bad
+9,App,6.0,neutral,Not bad
+10,Website,6.0,Positive,Great service!
+11,App ,3.0,Negative,Terrible experience!!!
+12,Delivery,1.0,Positive,Not bad
+13,App ,2.0,Positive,excellent
+14,Support,,negative,  good  
+15,App ,6.0,Neutral,
+16,App ,1.0,positive,ok
+17,website,5.0,NEUTRAL,Great service!
+18,Support,6.0,neutral,N/A
+19,Support,1.0,NEUTRAL,Great service!
+20,website,4.0,Positive,excellent
+21,App,4.0,Positive,ok
+22,App,3.0,positive,Not bad
+23,Support,3.0,Neutral,
+24,Support,5.0,Neutral,N/A
+25,App,5.0,NEUTRAL,excellent
+26,DELIVERY,,neutral,  good  
+27,Support,,negative,Terrible experience!!!
+28,Delivery,2.0,NEUTRAL,excellent
+29,Support,4.0,neutral,excellent
+30,Support,1.0,Negative,
+31,Delivery,,positive,N/A
+32,App,,Positive,ok
+33,App,6.0,negative,  good  
+34,DELIVERY,1.0,positive,
+35,App ,5.0,Neutral,Great service!
+36,website,5.0,Positive,
+37,DELIVERY,4.0,neutral,
+38,DELIVERY,6.0,neutral,excellent
+39,App ,1.0,Negative,N/A
+40,App ,3.0,Neutral,  good  
+5,App ,6.0,positive,Terrible experience!!!
+5,App ,6.0,positive,Terrible experience!!!
+10,Website,6.0,Positive,Great service!

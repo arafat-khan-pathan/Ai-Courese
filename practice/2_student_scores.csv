@@ -1,0 +1,53 @@
+student_id,name,math_score,english_score,gender,grade
+1,Priya Islam,78,100.0, F ,B+
+2,Fahim Rahman,71,20.0,female,B
+3,Tanvir Hossain,79,51.0,female,B
+4,Nusrat Hossain,91,,m,A+
+5,Tanvir Rahman,77,,m,A+
+6,Mim Khan,76,56.0,Male,C
+7,Sadia Hossain,30,, F ,B
+8,Mim Islam,73,,female,A
+9,Mim Rahman,69,94.0,m,A+
+10,Nusrat Islam,65,,m,B+
+11,Rakib Hossain,48,,female,A
+12,Fahim Khan,71,79.0,m,a
+13,Rafi Rahman,95,23.0, F ,A+
+14,Tanvir Rahman,43,,F,A+
+15,Sadia Khan,68,,M,A+
+16,Rafi Hossain,26,64.0, F ,A
+17,Rafi Islam,51,22.0,F,B
+18,Nusrat Islam,92,,Male,B
+19,Priya Hossain,34,,M,a
+20,Rafi Khan,93,, F ,B
+21,Nadia Hossain,100,58.0,m,c
+22,Rafi Khan,88,67.0,m,B+
+23,Sadia Islam,73,,Male,B+
+24,Nusrat Ahmed,75,,m,c
+25,Rakib Rahman,79,,Male,c
+26,Mim Islam,55,,m,a
+27,Fahim Khan,23,61.0,female,B
+28,Sadia Khan,63,,m,A
+29,Rakib Ahmed,30,,m,c
+30,Mim Rahman,82,22.0,Male,B
+31,Fahim Ahmed,59,,m,a
+32,Sadia Rahman,90,,Male,C
+33,Mim Islam,44,88.0,F,B
+34,Nusrat Khan,95,,M,c
+35,Mim Khan,49,58.0, F ,a
+36,Tanvir Khan,25,, F ,B
+37,Nusrat Islam,21,,female,C
+38,Tanvir Islam,52,81.0,M,A+
+39,Nusrat Islam,93,26.0,F,c
+40,Priya Khan,30,,m,a
+41,Priya Ahmed,86,,m,A+
+42,Arif Hossain,99,32.0, F ,B
+43,Arif Islam,40,90.0,F,A
+44,Fahim Rahman,96,24.0,Male,B+
+45,Arif Rahman,29,53.0,female,A
+46,Rakib Ahmed,39,38.0,M,B
+47,Arif Hossain,92,76.0,female,B+
+48,Arif Rahman,54,,M,a
+49,Rafi Rahman,61,23.0,F,B+
+50,Priya Hossain,22,54.0,F,A+
+3,Tanvir Hossain,79,51.0,female,B
+21,Nadia Hossain,100,58.0,m,c

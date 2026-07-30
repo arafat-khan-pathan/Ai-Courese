@@ -1,0 +1,64 @@
+order_id,product,category,price,quantity,order_date,city
+1,Bluetooth Speaker,Electronics,$8.63,1.0,2025-10-07,Chittagong
+2,Wireless Mouse,Electronics,$9.32,1.0,2025-10-15,Sylhet
+3,Backpack,Bags,65.83,1.0,23/03/2025,DHAKA 
+4,Water Bottle,Accessories,27.54,1.0,2025-07-14,
+5,Notebook Set,Stationery,92.54,5.0,05/03/2025,Chittagong
+6,Bluetooth Speaker,Electronics,,3.0,2025-10-23,Dhaka
+7,Wireless Mouse,Electronics,100.88,2.0,2025-02-21,Chittagong
+8,Notebook Set,Stationery,28.58,1.0,29/03/2025,dhaka
+9,LED Desk Lamp,Home,$72.03,5.0,23/04/2025,
+10,Wireless Mouse,Electronics,$38.21,3.0,2025-02-03,chittagong
+11,Notebook Set,Stationery,35.83,4.0,2025-03-15,dhaka
+12,Backpack,Bags,83.15,5.0,2025-07-24,dhaka
+13,Backpack,Bags,76.56,2.0,23/03/2025,Chittagong
+14,Headphones,Electronics,14.21,5.0,09/05/2025,
+15,Wireless Mouse,Electronics,$103.64,3.0,2025-06-24,Chittagong
+16,,Home,70.79,3.0,14/09/2025,chittagong
+17,Bluetooth Speaker,Electronics,$131.23,5.0,2025-04-12,
+18,LED Desk Lamp,Home,83.21,1.0,2025-06-15,Dhaka
+19,Notebook Set,Stationery,132.41,1.0,04/05/2025,Dhaka
+20,Bluetooth Speaker,Electronics,111.13,5.0,2025-03-06,Chittagong
+21,Backpack,Bags,28.94,2.0,04/10/2025,Sylhet
+22,Office Chair,Furniture,108.38,3.0,13/08/2025,Chittagong
+23,Bluetooth Speaker,Electronics,$40.95,5.0,28/04/2025,Dhaka
+24,Bluetooth Speaker,Electronics,$107.64,1.0,2025-06-19,dhaka
+25,Water Bottle,Accessories,$102.0,5.0,2025-10-23,
+26,USB Cable,Electronics,$122.09,4.0,2025-07-01,Chittagong
+27,Wireless Mouse,Electronics,102.64,4.0,23/06/2025,Dhaka
+28,Office Chair,Furniture,32.78,2.0,2025-05-23,
+29,Bluetooth Speaker,Electronics,69.25,1.0,04/10/2025,Dhaka
+30,Office Chair,Furniture,29.12,4.0,2025-01-31,Dhaka
+31,Phone Case,Accessories,43.45,4.0,12/10/2025,Chittagong
+32,LED Desk Lamp,Home,$32.54,,2025-10-05,DHAKA 
+33,Wireless Mouse,Electronics,12.27,5.0,2025-03-22,chittagong
+34,Bluetooth Speaker,Electronics,$128.44,2.0,2025-07-26,chittagong
+35,Office Chair,Furniture,$88.94,,26/10/2025,DHAKA 
+36,Water Bottle,Accessories,34.62,4.0,09/03/2025,DHAKA 
+37,USB Cable,Electronics,50.85,4.0,16/10/2025,Dhaka
+38,Backpack,Bags,$35.91,1.0,2025-05-06,dhaka
+39,USB Cable,Electronics,125.89,5.0,05/01/2025,chittagong
+40,Water Bottle,Accessories,$140.1,3.0,01/03/2025,Sylhet
+41,Backpack,Bags,$27.54,3.0,15/04/2025,
+42,Water Bottle,Accessories,$78.28,1.0,17/02/2025,
+43,Water Bottle,Accessories,11.39,3.0,24/03/2025,chittagong
+44,Phone Case,Accessories,$86.33,2.0,2025-10-07,DHAKA 
+45,Headphones,Electronics,85.12,3.0,21/01/2025,dhaka
+46,Office Chair,Furniture,101.71,4.0,21/03/2025,dhaka
+47,LED Desk Lamp,Home,146.55,1.0,02/04/2025,DHAKA 
+48,Phone Case,Accessories,121.32,3.0,23/03/2025,Dhaka
+49,Phone Case,Accessories,131.46,4.0,2025-06-29,
+50,Office Chair,Furniture,37.32,3.0,05/02/2025,DHAKA 
+51,Notebook Set,Stationery,98.01,5.0,19/06/2025,Dhaka
+52,Water Bottle,Accessories,30.89,1.0,2025-08-11,
+53,Notebook Set,Stationery,68.28,5.0,2025-04-08,Sylhet
+54,Phone Case,Accessories,5.25,2.0,2025-07-06,Sylhet
+55,Notebook Set,Stationery,95.36,3.0,2025-09-17,Chittagong
+56,Notebook Set,Stationery,$63.35,4.0,14/07/2025,dhaka
+57,Headphones,Electronics,87.52,3.0,2025-05-27,
+58,Headphones,Electronics,92.97,2.0,2025-09-19,
+59,LED Desk Lamp,Home,$100.53,5.0,2025-06-21,
+60,Office Chair,Furniture,$102.56,1.0,2025-01-24,Chittagong
+4,Water Bottle,Accessories,27.54,1.0,2025-07-14,
+11,Notebook Set,Stationery,35.83,4.0,2025-03-15,dhaka
+26,USB Cable,Electronics,$122.09,4.0,2025-07-01,Chittagong
